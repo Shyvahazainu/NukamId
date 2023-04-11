@@ -1,5 +1,7 @@
+
 * {
   font-family: "Poppins", sans-serif;
+
 }
 
 body {
@@ -89,7 +91,7 @@ footer h5 {
 }
 
 footer {
-  position: fixed;
+  position: flex;
   bottom: 0;
   left: 0;
   width: 100%;
