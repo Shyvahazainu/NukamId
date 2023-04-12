@@ -25,6 +25,14 @@ nav {
   padding-left: 20px;
 }
 
+.cek-login{
+  opacity: 0;
+  background-color: blue;
+  width: 120px;
+  height: auto;
+  position: absolute;
+}
+
 .search {
   width: 20px;
   position: absolute;
@@ -71,14 +79,15 @@ nav ul input {
 }
 
 #deskripsi {
-  margin-left: 7px;
+  margin-left: 12px;
+  padding-top: 20px;
 }
 
 #deskripsi:after {
   content: "";
   flex: 1 1;
-  border-bottom: 2px solid aliceblue;
-  margin: 2px 50.3% 10px 10px;
+  border-bottom: 4px solid aliceblue;
+  margin: 6px 52% 16px 22px;
   /* margin-left: 5px;
   margin-right: 50%; */
   align-items: baseline;
@@ -110,6 +119,6 @@ td:nth-child(1){
 
 td:nth-child(2) {
   padding-left: 2.3%;
-  padding-right: 50%;
+  padding-right: 52%;
   text-align: justify;
 }
