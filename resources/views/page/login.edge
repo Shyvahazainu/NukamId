@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/login.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;1,200;1,300;1,400&display=swap" rel="stylesheet" />
-    <title>Login-Register</title>
-  </head>
-  <body>
+@layout('layout/main')
+
+@section('styleu')
+  <link rel="stylesheet" href="css/login.css">
+@endsection
+
+@section('content')
     <div id="elipse"></div>
     <div id="elipse2"></div>
     <section id="login-register">
       <div class="depan">
-      <h3 class="judul">feraadadadasda</h3>
+      <h3 class="judul">Nukam.id</h3>
         <div class="form-box">
           <div class="button-box">
             <div id="btn">
@@ -28,6 +22,7 @@
             <input type="text" id="Email" class="input-field" required>
             <label for="Password">Password</Label>
             <input type="text" id="Password" class="input-field" required>
+            <img src="/img/hidden.png" alt="eye" class="eye" onclick="pass()">
             <button type="submit" class="submit-btn">Log In</button>
           </form>
           <form id="register" class="input-login">
@@ -42,27 +37,12 @@
             <button type="submit" class="submit-btn">Register</button>
           </form>
       </div>
+      <div id="elipse3"></div>
+      <div id="elipse4"></div>
     </section>
 
-    <script>
-      var x = document.getElementById("login");
-      var y = document.getElementById("register");
-      var z = document.getElementById("btn");
+    @section('scriptJs')
+    <script src="js/login.js"></script>
+  @endsection
+@endsection
 
-      function register() {
-        x.style.left = "-400px";
-        y.style.left = "50px";
-        y.style.top="120px";
-        z.style.left = "100px";
-      }
-
-      function login() {
-        x.style.left = "45px";
-        y.style.left = "450px";
-        z.style.left = "0px";
-      }
-    </script>
-
-    @include('component/footer')
-  </body>
-</html>
