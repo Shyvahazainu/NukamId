@@ -1,5 +1,7 @@
 'use strict'
 
+const { route } = require('@adonisjs/framework/src/Route/Manager')
+
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -20,10 +22,7 @@ const Route = use('Route')
 Route.on('/h').render('page/beranda')
 Route.on('/aboutus').render('page/aboutus')
 Route.on('/contact').render('page/contact')
-Route.on('/login').render('page/login')
+Route.on('/login').render('page/register')
 
-Route.get('/api/posts', 'PostController.index')
-Route.get('/api/posts/:id', 'PostController.show')
-Route.post('/api/posts', 'PostController.store')
-Route.put('/api/posts/:id', 'PostController.update')
-Route.delete('/api/posts/:id', 'PostController.destroy')
+Route.get('register', 'Auth/RegisterController.showLoginForm').as('register.show')
+Route.post('register', 'Auth/RegisterController.login').as('register')

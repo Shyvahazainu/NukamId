@@ -25,14 +25,14 @@ function changeImage(){
 
 
 function pass(){
-    if(a==1){
-        document.getElementById('Password').type='password';
-        document.getElementsByClassName('eye').src='eye.png'
-        a=0;
-    }else{
-        document.getElementById('Password').type='text';
-        document.getElementsByClassName('eye').src='hidden.png'
+    if(a==0){
+      document.getElementById('Password').type='text';
+      document.getElementsByClassName('eye').src='hidden.png';
         a=1;
+    }else{
+      document.getElementById('Password').type='password';
+      document.getElementsByClassName('eye').src='eye.png';
+        a=0;
     }
 
     
@@ -42,3 +42,8 @@ function pass(){
         img.src = "/img/eye.png";
       }
 }
+
+
+$(document).ready( function(){
+  $('#mytable').DataTable();
+})
