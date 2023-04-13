@@ -132,7 +132,9 @@
 }
 
 .toggle-btn:hover {
-  color: white;
+  margin-right: -10px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 #register {

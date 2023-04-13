@@ -7,6 +7,8 @@
 body {
   margin-block-start: 0;
   margin-inline-start: 0;
+  width: 1350px;
+  overflow-x: hidden;
 }
 
 header {
@@ -25,13 +27,6 @@ nav {
   padding-left: 20px;
 }
 
-.cek-login{
-  opacity: 0;
-  background-color: blue;
-  width: 120px;
-  height: auto;
-  position: absolute;
-}
 
 .search {
   width: 20px;
@@ -62,24 +57,39 @@ nav ul input {
 .logo {
   /* margin-left: 85px; */
   align-items: center;
-  left: 5%;
+  left: 48px;
   position: absolute;
   top: -5px;
 }
 
-.bagian-atas a {
-  font-size: 12px;
-  justify-content: space-between;
-  margin: 10px;
+.bagian-atas {
+  
+  padding-right: 10px;
 }
+
+.bagian-atas a {
+  padding: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.bagian-atas a:hover {
+  filter: invert(1);
+  background-color: #ffffff;
+  transition: 0.3s;
+  font-size: 11.67px;
+  font-weight: bold;
+}
+
 .bagian-atas img {
   position: relative;
   top: 3px;
   width: 15px;
 }
 
+
 #deskripsi {
-  margin-left: 12px;
+  margin-left: 48px;
   padding-top: 20px;
 }
 
@@ -114,11 +124,16 @@ td {
 }
 
 td:nth-child(1){
-  padding-left: 0.72%;
+  padding-left: 48px;
 }
 
 td:nth-child(2) {
   padding-left: 2.3%;
   padding-right: 52%;
   text-align: justify;
+}
+
+#login a{
+  text-decoration: none;
+  color: aliceblue;
 }
