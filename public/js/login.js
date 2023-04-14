@@ -20,19 +20,16 @@ function login() {
   z.style.left = "0px";
 }
 
-function changeImage(){
-}
-
 
 function pass(){
     if(a==1){
-        document.getElementById('Password').type='password';
-        document.getElementsByClassName('eye').src='eye.png'
-        a=0;
+      document.getElementById('Password').type='text';
+      document.getElementsByClassName('eye').src='hidden.png'
+      a=0;
     }else{
-        document.getElementById('Password').type='text';
-        document.getElementsByClassName('eye').src='hidden.png'
-        a=1;
+      document.getElementById('Password').type='password';
+      document.getElementsByClassName('eye').src='eye.png'
+      a=1;
     }
 
     

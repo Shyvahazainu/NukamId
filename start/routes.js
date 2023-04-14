@@ -17,7 +17,7 @@
 const Route = use('Route')
 
 
-Route.on('/Nukam').render('page/beranda')
+Route.on('/').render('page/beranda')
 Route.on('/aboutus').render('page/aboutus')
 Route.on('/contact').render('page/contact')
 Route.on('/login').render('page/login')

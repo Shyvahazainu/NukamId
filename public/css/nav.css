@@ -5,13 +5,14 @@
 }
 
 body {
+  margin-block-end: 0;
   margin-block-start: 0;
   margin-inline-start: 0;
   width: 1350px;
-  overflow-x: hidden;
 }
 
 header {
+
   height: 80px;
   color: aliceblue;
   background-color: #060000;
@@ -32,8 +33,17 @@ nav {
   width: 20px;
   position: absolute;
   right: 37%;
-  top: 30px;
+  top: 37px;
   opacity: 0.5;
+}
+
+.sm-input{
+  margin-top: 15px;
+}
+
+.sm-login{
+  display:flex;
+  margin-top: 15px;
 }
 
 nav ul {
@@ -59,11 +69,18 @@ nav ul input {
   align-items: center;
   left: 48px;
   position: absolute;
-  top: -5px;
+  /* top: 10px; */
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 .bagian-atas {
-  
+  margin-top: 24px;
+  padding-bottom: 10px;
   padding-right: 10px;
 }
 
@@ -88,50 +105,6 @@ nav ul input {
 }
 
 
-#deskripsi {
-  margin-left: 48px;
-  padding-top: 20px;
-}
-
-#deskripsi:after {
-  content: "";
-  flex: 1 1;
-  border-bottom: 4px solid aliceblue;
-  margin: 6px 52% 16px 22px;
-  /* margin-left: 5px;
-  margin-right: 50%; */
-  align-items: baseline;
-}
-
-footer h5 {
-  display: flex;
-  flex-direction: row;
-  font-weight: 400;
-}
-
-footer {
-  position: flex;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-image: url("/img/footer.jpg");
-  color: aliceblue;
-}
-
-td {
-  font-size: 15px;
-  vertical-align: top;
-}
-
-td:nth-child(1){
-  padding-left: 48px;
-}
-
-td:nth-child(2) {
-  padding-left: 2.3%;
-  padding-right: 52%;
-  text-align: justify;
-}
 
 #login a{
   text-decoration: none;
