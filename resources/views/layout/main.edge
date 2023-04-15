@@ -14,15 +14,16 @@
 
 <body>
     @if(request.originalUrl() !== '/login')
-        <!-- Tampilkan navbar hanya jika bukan halaman login -->
-        @include('component/navbar')
+    <!-- Tampilkan navbar hanya jika bukan halaman login -->
+    @include('component/navbar')
     @endif
-
-
 
     @!section('content')
 
+    @unless(request.originalUrl() === '/login')
+    <!-- Tampilkan footer jika bukan halaman login -->
     @include('component/footer')
+    @endunless
 </body>
 
 </html>
