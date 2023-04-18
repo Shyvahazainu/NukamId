@@ -85,10 +85,23 @@ nav ul input {
   overflow-x: hidden;
 }
 
-.bagian-atas a {
+.bagian-atas p:hover {
+  transform: translateY(-5px);
+  text-shadow: 0 0 4px rgb(121, 9, 16);
+}
+
+.bagian-atas p {
+  display: inline-block;
   padding: 10px;
   font-size: 12px;
   cursor: pointer;
+  position: relative;
+  transition: transform 250ms;
+}
+
+.bagian-atas a {
+  text-decoration: none;
+  color: black;
 }
 
 .bagian-atas img {
