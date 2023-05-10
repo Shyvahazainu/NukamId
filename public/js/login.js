@@ -3,22 +3,9 @@ var y = document.getElementById("register");
 var z = document.getElementById("btn");
 var img = document.querySelector('.eye');
 var a;
-const forms = document.querySelector('#login-register')
 pwShowHide = document.querySelectorAll('.eye'),
 links = document.querySelectorAll();
 
-function register() {
-  x.style.left = "-400px";
-  y.style.left = "50px";
-  y.style.top="120px";
-  z.style.left = "100px";
-}
-
-function login() {
-  x.style.left = "45px";
-  y.style.left = "450px";
-  z.style.left = "0px";
-}
 
 
 function pass(){

@@ -13,17 +13,18 @@
 </head>
 
 <body>
-    @if(request.originalUrl() !== '/login')
+    @if(request.originalUrl() !== '/login' && request.originalUrl() !== '/register')
     <!-- Tampilkan navbar hanya jika bukan halaman login -->
     @include('component/navbar')
     @endif
 
     @!section('content')
 
-    @unless(request.originalUrl() === '/login')
+    @if(request.originalUrl() !== '/login' && request.originalUrl() !== '/register')
     <!-- Tampilkan footer jika bukan halaman login -->
     @include('component/footer')
-    @endunless
+    @endif
+
 </body>
 
 </html>

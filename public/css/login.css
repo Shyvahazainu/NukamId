@@ -131,11 +131,22 @@ body {
 .judul {
   font-size: 36px;
   top: 20px;
-  left: 43.5%;
+  left: 26%;
   color: black;
   align-items: center;
   position: relative;
   margin: 20px auto;
+}
+
+.login-judul {
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    rgb(121, 9, 16) 52%,
+    rgba(2, 0, 36, 1) 48%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .judul a {
