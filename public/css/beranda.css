@@ -75,3 +75,47 @@
 .mvm {
   margin-left: 72%;
 }
+
+.img-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-right: 72px;
+}
+
+.now-playing {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 8px;
+  flex-direction: row;
+  display: inline-block;
+  position: relative;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+  opacity: 0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgba(121, 9, 16, 1) 7%,
+    rgba(2, 0, 36, 1) 93%
+  );
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+.upcoming {
+  width: 160px;
+  height: 110px;
+  margin-right: 16px;
+  border-radius: 10px;
+  object-fit: cover;
+}

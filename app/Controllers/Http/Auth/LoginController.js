@@ -10,7 +10,7 @@ class LoginController {
 
         await auth.attempt(email, password)
 
-        return response.redirect('/aboutus')
+        return response.redirect('/')
     }
 
     async logout({auth, response}){

@@ -13,9 +13,14 @@
 </head>
 
 <body>
-    @if(request.originalUrl() !== '/login' && request.originalUrl() !== '/register')
+    @if(request.originalUrl() !== '/login' && request.originalUrl() !== '/register' && request.originalUrl() !== '/home')
     <!-- Tampilkan navbar hanya jika bukan halaman login -->
-    @include('component/navbar')
+    @include('component/navbar') 
+    @endif
+
+    @if(request.originalUrl() == '/home')
+    <!-- Tampilkan navbar hanya jika bukan halaman login -->
+    @include('component/navbar2')
     @endif
 
     @!section('content')

@@ -17,7 +17,8 @@
 const Route = use('Route')
 
 
-Route.on('/home').render('page/beranda')
+Route.on('/').render('page/beranda')
+Route.on('/home').render('page/beranda2')
 Route.on('/aboutus').render('page/aboutus')
 Route.on('/contact').render('page/contact')
 Route.on('/register').render('auth/register')

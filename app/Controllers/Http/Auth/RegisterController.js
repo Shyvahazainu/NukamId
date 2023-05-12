@@ -17,20 +17,6 @@ class RegisterController {
       email: 'required|unique:users,email',
       password: 'required'
     }
-
-    const validation = await validate(request.all(), rules, messages)
-
-    /**
-     * validation failed
-     */
-    if(validation.fails()) {
-      session.withErrors(validation.messages()).flashExcept(['password'])
-      return response.redirect('back')
-    }
-
-    /**
-     * declaration validation
-     */
     const register=new Register()
 
      register.name = request.input('name')
