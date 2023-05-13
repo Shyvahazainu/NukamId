@@ -75,3 +75,35 @@
 .mvm {
   margin-left: 72%;
 }
+
+.nowplay-container{
+  height: 100%;
+  width: auto;
+  /* background-color: aqua; */
+}
+
+.swiper-wrapper{
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.box{
+  border-radius: 12px;
+  width:400px;
+  height: 270px;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.box img{
+  height: 270px;
+  width:400px;
+  /* object-fit: fill; */
+  margin: 0 8px;
+  border-radius: 12px;
+}
+
+.flex {
+  display: flex;
+}
+

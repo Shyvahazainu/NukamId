@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -14,27 +14,28 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use("Route");
 
+// Route.on("/beranda").render("page/beranda");
+Route.on("/aboutus").render("page/aboutus");
+Route.on("/contact").render("page/contact");
+Route.on("/register").render("auth/register");
+Route.on("/login").render("auth/login");
+Route.on("/search").render("page/search");
 
-Route.on('/home').render('page/beranda')
-Route.on('/aboutus').render('page/aboutus')
-Route.on('/contact').render('page/contact')
-Route.on('/register').render('auth/register')
-Route.on('/login').render('auth/login')
+// Route.get("/beranda", "BerandaController.index").as("beranda");
+Route.get("/beranda", "BerandaController.index");
 
-Route.get('beranda', 'BerandaController.index'). as('beranda')
+Route.get("register", "Auth/RegisterController.index").as("register.index");
+Route.post("register", "Auth/RegisterController.store").as("register.store");
 
-Route.get('register', 'Auth/RegisterController.index').as('register.index')
-Route.post('register', 'Auth/RegisterController.store').as('register.store')
+Route.get("login", "Auth/LoginController.index").as("login.index");
+Route.post("login", "Auth/LoginController.check").as("login.check");
+Route.get("logout", "Auth/LoginController.logout").as("logout");
 
-Route.get('login', 'Auth/LoginController.index').as('login.index')
-Route.post('login', 'Auth/LoginController.check').as('login.check')
-Route.get('logout', 'Auth/LoginController.logout').as('logout')
-
-Route.get('/posts', 'RegistrationController.index').as('posts.index')
-Route.get('/posts/create', 'RegistrationController.create').as('posts.create')
-Route.post('/posts/store', 'RegistrationController.store').as('posts.store')
+Route.get("/posts", "RegistrationController.index").as("posts.index");
+Route.get("/posts/create", "RegistrationController.create").as("posts.create");
+Route.post("/posts/store", "RegistrationController.store").as("posts.store");
 
 // Route.get('/login', 'RegisterController.index')
 // Route.get('/login/:id', 'RegisterController.show')
