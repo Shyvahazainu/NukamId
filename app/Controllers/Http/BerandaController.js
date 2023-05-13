@@ -1,30 +1,21 @@
 "use strict";
+import axios from "axios";
 
 class BerandaController {
-  index({ view, auth }) {
+  async index({ view, auth }) {
     // const user = auth.user.toJSON()
-    const axios = require("axios");
+    let movie = axios.get(
+      "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
+      {
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjN2M3MDRhMGEwYmY0MjJiMWIxOWQzZmRlYzhlNmYxZCIsInN1YiI6IjYzNjI0NDViNDIwMjI4MDA3OThiZjU3ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tEbAESEXDTgB_0rNhpN43ISmpJsFg9mNPv8YSR1V6_A",
+        },
+      }
+    );
+    movie = movie.data.results;
 
-    // Make a request for a user with a given ID
-    axios
-      .get(
-        "https://api.themoviedb.org/3/movie/550?api_key=c7c704a0a0bf422b1b19d3fdec8e6f1d"
-      )
-      .then(function (response) {
-        // handle success
-        // return view.render("page/beranda", { response });
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-      });
-  }
-
-  anomali() {
-    return "hai";
+    return view.render("page/beranda", { movie });
   }
 }
 

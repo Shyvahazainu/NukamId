@@ -16,14 +16,14 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use("Route");
 
-// Route.on("/beranda").render("page/beranda");
+Route.on("/beranda").render("page/beranda");
 Route.on("/aboutus").render("page/aboutus");
 Route.on("/contact").render("page/contact");
 Route.on("/register").render("auth/register");
 Route.on("/login").render("auth/login");
 Route.on("/search").render("page/search");
 
-// Route.get("/beranda", "BerandaController.index").as("beranda");
+Route.get("/beranda", "BerandaController.index").as("beranda");
 Route.get("/beranda", "BerandaController.index");
 
 Route.get("register", "Auth/RegisterController.index").as("register.index");
